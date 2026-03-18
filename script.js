@@ -57,19 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---- Scroll Fade-In Animation ----
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    // ---- Scroll Reveal Animation ----
+    const reveals = document.querySelectorAll('[data-reveal], .fade-in');
+    const revealOptions = { 
+        threshold: 0.15, 
+        rootMargin: "0px 0px -80px 0px" 
+    };
+    
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
             entry.target.classList.add('appear');
             observer.unobserve(entry.target);
         });
-    }, appearOptions);
+    }, revealOptions);
+    
+    reveals.forEach(el => revealOnScroll.observe(el));
 
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
+    // Stagger effect for cards
+    document.querySelectorAll('.projects-grid, .shop-grid').forEach(grid => {
+        grid.querySelectorAll('article').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+            card.classList.add('fade-in');
+            revealOnScroll.observe(card);
+        });
     });
 
     // ---- Filtering & Tabs Logic (Projects & Tutorials) ----
@@ -142,5 +153,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ---- Back to Top Button ----
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    backToTop.className = 'back-to-top';
+    Object.assign(backToTop.style, {
+        position: 'fixed', bottom: '30px', right: '30px', width: '50px', height: '50px',
+        borderRadius: '50%', background: 'var(--accent-primary)', color: '#fff',
+        border: 'none', cursor: 'pointer', display: 'none', z-index: '99',
+        boxShadow: '0 5px 20px rgba(0,0,0,0.4)', transition: 'var(--transition-fast)'
+    });
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) backToTop.style.display = 'block';
+        else backToTop.style.display = 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    backToTop.addEventListener('mouseenter', () => backToTop.style.transform = 'translateY(-5px)');
+    backToTop.addEventListener('mouseleave', () => backToTop.style.transform = 'translateY(0)');
 
 });
