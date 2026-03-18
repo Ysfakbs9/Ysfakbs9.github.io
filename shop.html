@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Mağaza | Yusuf Akbaş</title>
+    <meta name="description" content="Yusuf Akbaş - Elektronik Projeler, kaynak kodları, Gerber dosyaları ve eğitim setleri satın alma mağazası.">
+    <meta name="keywords" content="Mağaza, Yusuf Akbaş, Gerber Dosyası Satın Al, STM32 Kod, Elektronik Proje, Devre Tasarımı PDF">
+    <meta name="author" content="Yusuf Akbaş">
+    <meta property="og:title" content="Dijital Mağaza | Yusuf Akbaş">
+    <meta property="og:description" content="Elektrik-Elektronik donanım proje dosyaları (Gerber, BOM, Kod) dijital mağazası.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Ysfakbs9.github.io/shop.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="logo"><a href="index.html" style="color:var(--text-primary);">EEM<span>.</span></a></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header"><h2>Menü</h2><button class="close-btn" id="closeBtn">&times;</button></div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i> Ana Sayfa</a></li>
+            <li><a href="experience.html"><i class="fa-solid fa-user-tie fa-fw"></i> Deneyim & Yetenekler</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-microchip fa-fw"></i> Projeler <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="projects.html?category=all">Tüm Projeler</a></li>
+                    <li><a href="projects.html?category=iot">IoT Sistemleri</a></li>
+                    <li><a href="projects.html?category=arduino">Arduino</a></li>
+                    <li><a href="projects.html?category=stm32">STM32</a></li>
+                    <li><a href="projects.html?category=rp">Raspberry Pi</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-book-open fa-fw"></i> Öğretici Çalışmalar <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="tutorials.html?category=all">Tüm Konular</a></li>
+                    <li><a href="tutorials.html?category=temel">Temel Elektronik</a></li>
+                    <li><a href="tutorials.html?category=ileri">İleri Gömülü Sistemler</a></li>
+                    <li><a href="tutorials.html?category=yazilim">Mühendislik Yazılımları</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"><i class="fa-solid fa-pen-nib fa-fw"></i> Makaleler</a></li>
+            <li><a href="shop.html" class="active"><i class="fa-solid fa-cart-shopping fa-fw"></i> Dijital Mağaza</a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope fa-fw"></i> İletişim</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a href="#"><i class="fa-brands fa-github fa-lg"></i> GitHub</a>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <section class="section fade-in" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="page-title"><i class="fa-solid fa-store" style="color:var(--accent-primary);"></i> Dijital Mağaza</h1>
+                <p class="page-subtitle">Projelerimi geliştirirken ürettiğim detaylı PCB üretim dosyalarını (Gerber), kaynak kodlarını ve kapsamlı dokümantasyonlarını anında satın alabilirsiniz.</p>
+                
+                <div class="shop-grid">
+                    <!-- Ürün 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <!-- Örnek Resim -->
+                            <img src="https://picsum.photos/seed/pcbmotor/600/400" alt="Motor Sürücü">
+                            <span class="price-tag">₺250</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Fırçasız Motor Sürücü Kiti</h3>
+                            <p>STM32G4 platformu üzerinde FOC algoritması çalıştıran motor sürücü kartının üretime hazır tüm dosyaları.</p>
+                            <ul class="product-includes">
+                                <li><i class="fa-solid fa-check"></i> 4 Katmanlı Altium Gerber</li>
+                                <li><i class="fa-solid fa-check"></i> C/C++ Kaynak Kodları (CubeIDE)</li>
+                                <li><i class="fa-solid fa-check"></i> BOM (Malzeme) Listesi</li>
+                                <li><i class="fa-solid fa-check"></i> Tasarım Rehberi (PDF)</li>
+                            </ul>
+                            <a href="#" class="buy-btn" target="_blank"><i class="fa-solid fa-cart-arrow-down"></i> Satın Al (Shopier)</a>
+                        </div>
+                    </article>
+
+                    <!-- Ürün 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/smarthome/600/400" alt="Akıllı Ev">
+                            <span class="price-tag">₺150</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Röle Modülü Yapım Dosyaları</h3>
+                            <p>ESP32 kullanılarak tasarlanan, standart yerel ağ kontrolüne sahip şık röle modülü proje dosyaları.</p>
+                            <ul class="product-includes">
+                                <li><i class="fa-solid fa-check"></i> 2 Katmanlı KiCad Dosyaları</li>
+                                <li><i class="fa-solid fa-check"></i> Arduino IDE Kaynak Kodları</li>
+                                <li><i class="fa-solid fa-check"></i> Basılı PDF Şemalar</li>
+                            </ul>
+                            <a href="#" class="buy-btn" target="_blank"><i class="fa-solid fa-cart-arrow-down"></i> Satın Al (Gumroad)</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Ürün 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                           <img src="https://picsum.photos/seed/robotics/600/400" alt="Robot Eğitim">
+                           <span class="price-tag">₺100</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Çizgi İzleyen Robot Eğitim Seti</h3>
+                            <p>Sensör okumalarından başlanarak hızlı çizgi izleyen robot yapımı donanım ve PID kontrol eğitim seti.</p>
+                            <ul class="product-includes">
+                                <li><i class="fa-solid fa-check"></i> Video Anlatımlar (12 Bölüm)</li>
+                                <li><i class="fa-solid fa-check"></i> Çizgi İzleyen Şablon Kodları</li>
+                                <li><i class="fa-solid fa-check"></i> Örnek Algoritma Çıktıları</li>
+                            </ul>
+                            <a href="#" class="buy-btn" target="_blank"><i class="fa-solid fa-cart-arrow-down"></i> Satın Al (Patreon)</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 Yusuf Akbaş. Tüm Hakları Saklıdır.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
