@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(backToTop.style, {
         position: 'fixed', bottom: '30px', right: '30px', width: '50px', height: '50px',
         borderRadius: '50%', background: 'var(--accent-primary)', color: '#fff',
-        border: 'none', cursor: 'pointer', display: 'none', z-index: '99',
+        border: 'none', cursor: 'pointer', display: 'none', zIndex: '99',
         boxShadow: '0 5px 20px rgba(0,0,0,0.4)', transition: 'var(--transition-fast)'
     });
     document.body.appendChild(backToTop);
