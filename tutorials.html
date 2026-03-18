@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğretici Çalışmalar | Yusuf Akbaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="logo"><a href="index.html" style="color:var(--text-primary);">EEM<span>.</span></a></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header"><h2>Menü</h2><button class="close-btn" id="closeBtn">&times;</button></div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i> Ana Sayfa</a></li>
+            <li><a href="experience.html"><i class="fa-solid fa-user-tie fa-fw"></i> Deneyim & Yetenekler</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-microchip fa-fw"></i> Projeler <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="projects.html?category=all">Tüm Projeler</a></li>
+                    <li><a href="projects.html?category=iot">IoT Sistemleri</a></li>
+                    <li><a href="projects.html?category=arduino">Arduino</a></li>
+                    <li><a href="projects.html?category=stm32">STM32</a></li>
+                    <li><a href="projects.html?category=rp">Raspberry Pi</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu open">
+                <a href="#" class="submenu-toggle active"><i class="fa-solid fa-book-open fa-fw"></i> Öğretici Çalışmalar <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu" style="max-height: 500px;">
+                    <li><a href="tutorials.html?category=all" class="active">Tüm Konular</a></li>
+                    <li><a href="tutorials.html?category=temel">Temel Elektronik</a></li>
+                    <li><a href="tutorials.html?category=ileri">İleri Gömülü Sistemler</a></li>
+                    <li><a href="tutorials.html?category=yazilim">Mühendislik Yazılımları</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"><i class="fa-solid fa-pen-nib fa-fw"></i> Makaleler</a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope fa-fw"></i> İletişim</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a href="#"><i class="fa-brands fa-github fa-lg"></i> GitHub</a>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <section class="section fade-in" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="page-title">Öğretici Çalışmalar</h1>
+                <p class="page-subtitle">Elektronik ve yazılım bileşenleri için hazırladığım dökümantasyonlar, eğitim notları ve kaynak kodlar.</p>
+                
+                <div class="tabs-container" id="tutorialTabs">
+                    <button class="tab-btn active" data-filter="all">Tümü</button>
+                    <button class="tab-btn" data-filter="temel">Temel Elektronik</button>
+                    <button class="tab-btn" data-filter="ileri">İleri Gömülü Sistemler</button>
+                    <button class="tab-btn" data-filter="yazilim">Yazılımlar</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Konu Başlığı</th>
+                                <th>Kategori</th>
+                                <th>Platform</th>
+                                <th>Durum</th>
+                                <th>İncele</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tutorialsGrid">
+                            <tr class="filter-item" data-category="ileri">
+                                <td><div class="item-title">FreeRTOS Görev (Task) Yönetimi</div></td>
+                                <td>İleri Gömülü Sistemler</td>
+                                <td><span class="badge">STM32</span></td>
+                                <td><span class="status complete">Tamamlandı</span></td>
+                                <td><a href="#" class="view-btn"><i class="fa-solid fa-arrow-right"></i></a></td>
+                            </tr>
+                            <tr class="filter-item" data-category="temel">
+                                <td><div class="item-title">Op-Amp Uygulamaları (Amplifikatör)</div></td>
+                                <td>Temel Elektronik</td>
+                                <td><span class="badge">Breadboard</span></td>
+                                <td><span class="status complete">Tamamlandı</span></td>
+                                <td><a href="#" class="view-btn"><i class="fa-solid fa-arrow-right"></i></a></td>
+                            </tr>
+                            <tr class="filter-item" data-category="yazilim">
+                                <td><div class="item-title">Altium Designer ile 4 Katmanlı PCB Tasarımı</div></td>
+                                <td>Mühendislik Yazılımları</td>
+                                <td><span class="badge">Altium</span></td>
+                                <td><span class="status ongoing">Geliştiriliyor</span></td>
+                                <td><a href="#" class="view-btn"><i class="fa-solid fa-arrow-right"></i></a></td>
+                            </tr>
+                            <tr class="filter-item" data-category="temel">
+                                <td><div class="item-title">BJT ve MOSFET Karakteristiği</div></td>
+                                <td>Temel Elektronik</td>
+                                <td><span class="badge">Proteus</span></td>
+                                <td><span class="status complete">Tamamlandı</span></td>
+                                <td><a href="#" class="view-btn"><i class="fa-solid fa-arrow-right"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 Yusuf Akbaş. Tüm Hakları Saklıdır.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

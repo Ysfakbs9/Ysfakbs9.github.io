@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf Akbaş | Profesyonel Portfolyo</title>
+    <meta name="description" content="Yusuf Akbaş Elektrik Elektronik Mühendisliği portfolyosu. Deneyimler, projeler ve makaleler.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div class="logo"><a href="index.html" style="color:var(--text-primary);">EEM<span>.</span></a></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menü</h2>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html" class="active"><i class="fa-solid fa-house fa-fw"></i> Ana Sayfa</a></li>
+            <li><a href="experience.html"><i class="fa-solid fa-user-tie fa-fw"></i> Deneyim & Yetenekler</a></li>
+            
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-microchip fa-fw"></i> Projeler <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="projects.html?category=all">Tüm Projeler</a></li>
+                    <li><a href="projects.html?category=iot">IoT Sistemleri</a></li>
+                    <li><a href="projects.html?category=arduino">Arduino</a></li>
+                    <li><a href="projects.html?category=stm32">STM32</a></li>
+                    <li><a href="projects.html?category=rp">Raspberry Pi</a></li>
+                </ul>
+            </li>
+            
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-book-open fa-fw"></i> Öğretici Çalışmalar <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="tutorials.html?category=all">Tüm Konular</a></li>
+                    <li><a href="tutorials.html?category=temel">Temel Elektronik</a></li>
+                    <li><a href="tutorials.html?category=ileri">İleri Gömülü Sistemler</a></li>
+                    <li><a href="tutorials.html?category=yazilim">Mühendislik Yazılımları</a></li>
+                </ul>
+            </li>
+
+            <li><a href="blog.html"><i class="fa-solid fa-pen-nib fa-fw"></i> Makaleler</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope fa-fw"></i> İletişim</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a href="#"><i class="fa-brands fa-github fa-lg"></i> GitHub</a>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <section id="about" class="section hero-section fade-in">
+            <div class="container">
+                <p class="greeting">Hoş Geldiniz,</p>
+                <h1 class="name">Ben <span class="highlight">Yusuf Akbaş</span></h1>
+                <h2 class="role">Elektrik Elektronik Mühendisi</h2>
+                <p class="bio">
+                    Donanım tasarımı, gömülü yazılım ve otomasyon sistemleri üzerine tutkulu bir mühendisim. Problemleri analiz ederek, yenilikçi ve verimli çözümler üretmeyi hedeflerim.
+                </p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary">Projelerimi Gör</a>
+                    <a href="experience.html" class="btn btn-secondary">Yetenekler ve CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights" class="section fade-in" style="padding-top:2rem;">
+            <div class="container">
+                <div class="two-cols">
+                    <div>
+                        <h2 class="section-title">Öne Çıkan Proje</h2>
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3>Akıllı Ev Otomasyon Modülü</h3>
+                                <p>ESP32 tabanlı, Wi-Fi kontrollü devrenin şema tasarımı, PCB dizgisi ve gömülü yazılımları.</p>
+                                <div class="skill-tags">
+                                    <span>C++</span>
+                                    <span>IoT</span>
+                                </div>
+                                <a href="projects.html?category=iot" class="btn btn-secondary" style="margin-top: 1.5rem; border:none; padding:0; color:var(--accent-primary);">Detayları İncele &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div>
+                        <h2 class="section-title">Son Makale</h2>
+                        <article class="blog-card">
+                            <span class="date">18 Mart 2026</span>
+                            <h3><a href="blog.html">Mikrodenetleyici Seçim Rehberi</a></h3>
+                            <p>Performans, maliyet ve takım desteği açısından platformların (STM32, ESP32, Arduino) analizi ve kullanım senaryoları.</p>
+                            <a href="blog.html" class="btn btn-secondary" style="margin-top: 1.5rem; border:none; padding:0; color:var(--accent-primary);">Devamını Oku &rarr;</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in">
+            <div class="container text-center">
+                <h2 class="section-title" style="justify-content: center;">İletişime Geç</h2>
+                <p class="contact-desc">Yeni projeler, staj imkanları veya fikir alışverişi için benimle iletişime geçebilirsiniz. Mesajlarınıza en kısa sürede dönüş yapmaya çalışacağım.</p>
+                <a href="mailto:ornek@mail.com" class="btn btn-primary contact-btn">Bana E-Posta Gönder</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yusuf Akbaş. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

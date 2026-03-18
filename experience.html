@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneyim & Yetenekler | Yusuf Akbaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="logo"><a href="index.html" style="color:var(--text-primary);">EEM<span>.</span></a></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header"><h2>Menü</h2><button class="close-btn" id="closeBtn">&times;</button></div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i> Ana Sayfa</a></li>
+            <li><a href="experience.html" class="active"><i class="fa-solid fa-user-tie fa-fw"></i> Deneyim & Yetenekler</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-microchip fa-fw"></i> Projeler <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="projects.html?category=all">Tüm Projeler</a></li>
+                    <li><a href="projects.html?category=iot">IoT Sistemleri</a></li>
+                    <li><a href="projects.html?category=arduino">Arduino</a></li>
+                    <li><a href="projects.html?category=stm32">STM32</a></li>
+                    <li><a href="projects.html?category=rp">Raspberry Pi</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-book-open fa-fw"></i> Öğretici Çalışmalar <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="tutorials.html?category=all">Tüm Konular</a></li>
+                    <li><a href="tutorials.html?category=temel">Temel Elektronik</a></li>
+                    <li><a href="tutorials.html?category=ileri">İleri Gömülü Sistemler</a></li>
+                    <li><a href="tutorials.html?category=yazilim">Mühendislik Yazılımları</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"><i class="fa-solid fa-pen-nib fa-fw"></i> Makaleler</a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope fa-fw"></i> İletişim</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a href="#"><i class="fa-brands fa-github fa-lg"></i> GitHub</a>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <section class="section fade-in" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="page-title">Deneyim & Yetenekler</h1>
+                <p class="page-subtitle">Eğitim geçmişim, yeteneklerim ve profesyonel/gönüllü iş deneyimlerim.</p>
+                
+                <h2 class="section-title" style="margin-top:3rem;">Deneyim</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Haziran 2025 - Eylül 2025</div>
+                        <div class="timeline-content">
+                            <h3>Ar-Ge Donanım Stajyeri</h3>
+                            <h4>Teknoloji A.Ş.</h4>
+                            <p>Endüstriyel otomasyon cihazları için güç kaynağı regülasyon kartlarının prototiplenmesi ve EMI/EMC test süreçlerinin asiste edilmesi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Eylül 2024 - Günümüz</div>
+                        <div class="timeline-content">
+                            <h3>Teknoloji Takımı Kaptanı</h3>
+                            <h4>Üniversite Robotik Kulübü</h4>
+                            <p>Otonom araçlar proje takımının liderliği ve sistem entegrasyonundan sorumlu kişi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-cols" style="margin-top: 5rem;">
+                    <div class="education">
+                        <h2 class="section-title">Eğitim</h2>
+                        <div class="edu-card">
+                            <h3>Elektrik Elektronik Mühendisliği (Lisans)</h3>
+                            <p class="uni-name">Örnek Üniversitesi</p>
+                            <p class="edu-date">2022 - 2026</p>
+                            <p>Not Ortalaması: 3.65/4.00</p>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h2 class="section-title">Teknik Yetenekler</h2>
+                        <div class="skill-category">
+                            <h3>Donanım & PCB</h3>
+                            <div class="skill-tags">
+                                <span>Altium Designer</span><span>KiCad</span><span>Osiloskop & Sinyal Analizi</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Gömülü Yazılım</h3>
+                            <div class="skill-tags">
+                                <span>C/C++</span><span>STM32</span><span>Arduino & ESP32</span><span>FreeRTOS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Genel & Simulasyon</h3>
+                            <div class="skill-tags">
+                                <span>MATLAB</span><span>Python</span><span>Proteus</span><span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 Yusuf Akbaş. Tüm Hakları Saklıdır.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

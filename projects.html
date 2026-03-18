@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | Yusuf Akbaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="header">
+        <div class="menu-toggle" id="menuToggle"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="logo"><a href="index.html" style="color:var(--text-primary);">EEM<span>.</span></a></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header"><h2>Menü</h2><button class="close-btn" id="closeBtn">&times;</button></div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i> Ana Sayfa</a></li>
+            <li><a href="experience.html"><i class="fa-solid fa-user-tie fa-fw"></i> Deneyim & Yetenekler</a></li>
+            <li class="has-submenu open">
+                <a href="#" class="submenu-toggle active"><i class="fa-solid fa-microchip fa-fw"></i> Projeler <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu" style="max-height: 500px;">
+                    <li><a href="projects.html?category=all" class="active">Tüm Projeler</a></li>
+                    <li><a href="projects.html?category=iot">IoT Sistemleri</a></li>
+                    <li><a href="projects.html?category=arduino">Arduino</a></li>
+                    <li><a href="projects.html?category=stm32">STM32</a></li>
+                    <li><a href="projects.html?category=rp">Raspberry Pi</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle"><i class="fa-solid fa-book-open fa-fw"></i> Öğretici Çalışmalar <i class="fa-solid fa-chevron-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="tutorials.html?category=all">Tüm Konular</a></li>
+                    <li><a href="tutorials.html?category=temel">Temel Elektronik</a></li>
+                    <li><a href="tutorials.html?category=ileri">İleri Gömülü Sistemler</a></li>
+                    <li><a href="tutorials.html?category=yazilim">Mühendislik Yazılımları</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"><i class="fa-solid fa-pen-nib fa-fw"></i> Makaleler</a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope fa-fw"></i> İletişim</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a href="#"><i class="fa-brands fa-github fa-lg"></i> GitHub</a>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <section class="section fade-in" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="page-title">Projeler</h1>
+                <p class="page-subtitle">Geliştirdiğim hardware ve firmware projeleri kategorize edilmiş şekilde aşağıda yer almaktadır.</p>
+                
+                <!-- Category Tabs -->
+                <div class="tabs-container" id="projectTabs">
+                    <button class="tab-btn active" data-filter="all">Tümü</button>
+                    <button class="tab-btn" data-filter="iot">IoT</button>
+                    <button class="tab-btn" data-filter="arduino">Arduino</button>
+                    <button class="tab-btn" data-filter="stm32">STM32</button>
+                    <button class="tab-btn" data-filter="rp">Raspberry Pi</button>
+                </div>
+
+                <!-- Projects grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <article class="project-card filter-item" data-category="iot arduino">
+                        <!-- Proje Resmi -->
+                        <div class="project-image">
+                            <!-- Gerçek resminiz olana kadar denemek için placeholder koydum -->
+                            <img src="https://picsum.photos/seed/circuit/600/400" alt="Devre Resmi">
+                        </div>
+                        <div class="project-content">
+                            <h3>Akıllı Ev Otomasyon Modülü (IoT & Arduino)</h3>
+                            <p>ESP32 kullanılarak Wi-Fi kontrollü akıllı röle yapımı. HTTP server ile lokal ağdan röle kontrolü.</p>
+                            <div class="skill-tags">
+                                <span>C++</span><span>IoT</span><span>Arduino IDE</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card filter-item" data-category="stm32">
+                        <div class="project-image">
+                            <!-- Örnek Resim -->
+                            <img src="https://picsum.photos/seed/micro/600/400" alt="Motor Sürücü">
+                        </div>
+                        <div class="project-content">
+                            <h3>Fırçasız Motor Sürücü (STM32)</h3>
+                            <p>STM32G4 serisi kullanılarak Field Oriented Control (FOC) tabanlı motor sürücü kartı donanımı ve yazılımı.</p>
+                            <div class="skill-tags">
+                                <span>STM32</span><span>C</span><span>Control Theory</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card filter-item" data-category="arduino">
+                        <div class="project-image">
+                            <!-- Örnek Resim -->
+                            <img src="https://picsum.photos/seed/robot/600/400" alt="Robot Projesi">
+                        </div>
+                        <div class="project-content">
+                            <h3>Otonom Çizgi İzleyen Robot</h3>
+                            <p>PID kontrol algoritması ile yüksek hızlı engele duyarlı robot projesi.</p>
+                            <div class="skill-tags">
+                                <span>Arduino Nano</span><span>Sensörler</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card filter-item" data-category="rp">
+                        <div class="project-image">
+                            <!-- Örnek Resim -->
+                            <img src="https://picsum.photos/seed/camera/600/400" alt="Raspberry Pi Görüntü">
+                        </div>
+                        <div class="project-content">
+                            <h3>Görüntü İşleme ile Kapı Kilidi (RPi)</h3>
+                            <p>Raspberry Pi 4 ve OpenCV kullanılarak geliştirilmiş yüz tanıma destekli erişim ve kontrol sistemi.</p>
+                            <div class="skill-tags">
+                                <span>Raspberry Pi</span><span>Python</span><span>OpenCV</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 Yusuf Akbaş. Tüm Hakları Saklıdır.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
