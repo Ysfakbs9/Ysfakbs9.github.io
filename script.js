@@ -6,18 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
 
     function openSidebar() {
+        console.log("Opening sidebar...");
         sidebar.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden'; 
     }
 
     function closeSidebar() {
+        console.log("Closing sidebar...");
         sidebar.classList.remove('active');
         overlay.classList.remove('active');
         document.body.style.overflow = '';
     }
 
-    if(menuToggle) menuToggle.addEventListener('click', openSidebar);
+    if(menuToggle) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openSidebar();
+        });
+        // Add touchstart for faster response on some mobile browsers
+        menuToggle.addEventListener('touchstart', (e) => {
+            e.stopPropagation();
+            openSidebar();
+        }, {passive: true});
+    }
     if(closeBtn) closeBtn.addEventListener('click', closeSidebar);
     if(overlay) overlay.addEventListener('click', closeSidebar);
 
